@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{542D4CFC-7A26-4B85-814B-F2CCB8B3DDF7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AnimatedAvatar</RootNamespace>
+    <AssemblyName>AnimatedAvatar</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animator.cs" />
+    <Compile Include="FaceFramesRepository.cs" />
+    <Compile Include="InitialData.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MicrophoneSoundMeter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Images\Eyes\BlinkingEyes\BlinkingEyes01.png" />
+    <Content Include="Resources\Images\Eyes\BlinkingEyes\BlinkingEyes02.png" />
+    <Content Include="Resources\Images\Eyes\BlinkingEyes\BlinkingEyes03.png" />
+    <Content Include="Resources\Images\Eyes\BlinkingEyes\BlinkingEyes04.png" />
+    <Content Include="Resources\Images\Eyes\BlinkingEyes\BlinkingEyes05.png" />
+    <Content Include="Resources\Images\Eyes\BlinkingEyes\BlinkingEyes06.png" />
+    <Content Include="Resources\Images\Eyes\BlinkingEyes\BlinkingEyes07.png" />
+    <Content Include="Resources\Images\Eyes\BlinkingEyes\BlinkingEyes08.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes01.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes02.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes03.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes04.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes05.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes06.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes07.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes08.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes09.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes10.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes11.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes12.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes13.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes14.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes15.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes16.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes17.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes18.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes19.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes20.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes21.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes22.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes23.png" />
+    <Content Include="Resources\Images\Eyes\EnlargingEyes\EnlargingEyes24.png" />
+    <Content Include="Resources\Images\Eyes\Eyes.png" />
+    <Content Include="Resources\Images\Eyes\LookingToLeftSideEyes\LookingToLeftSideEyes01.png" />
+    <Content Include="Resources\Images\Eyes\LookingToLeftSideEyes\LookingToLeftSideEyes02.png" />
+    <Content Include="Resources\Images\Eyes\LookingToLeftSideEyes\LookingToLeftSideEyes03.png" />
+    <Content Include="Resources\Images\Eyes\LookingToLeftSideEyes\LookingToLeftSideEyes04.png" />
+    <Content Include="Resources\Images\Eyes\LookingToLeftSideEyes\LookingToLeftSideEyes05.png" />
+    <Content Include="Resources\Images\Eyes\LookingToLeftSideEyes\LookingToLeftSideEyes06.png" />
+    <Content Include="Resources\Images\Eyes\LookingToLeftSideEyes\LookingToLeftSideEyes07.png" />
+    <Content Include="Resources\Images\Eyes\LookingToLeftSideEyes\LookingToLeftSideEyes08.png" />
+    <Content Include="Resources\Images\Eyes\LookingToLeftSideEyes\LookingToLeftSideEyes09.png" />
+    <Content Include="Resources\Images\Eyes\LookingToLeftSideEyes\LookingToLeftSideEyes10.png" />
+    <Content Include="Resources\Images\Eyes\LookingToLeftSideEyes\LookingToLeftSideEyes11.png" />
+    <Content Include="Resources\Images\Eyes\LookingToLeftSideEyes\LookingToLeftSideEyes12.png" />
+    <Content Include="Resources\Images\Eyes\LookingToRightSideEyes\LookingToRightSideEyes01.png" />
+    <Content Include="Resources\Images\Eyes\LookingToRightSideEyes\LookingToRightSideEyes02.png" />
+    <Content Include="Resources\Images\Eyes\LookingToRightSideEyes\LookingToRightSideEyes03.png" />
+    <Content Include="Resources\Images\Eyes\LookingToRightSideEyes\LookingToRightSideEyes04.png" />
+    <Content Include="Resources\Images\Eyes\LookingToRightSideEyes\LookingToRightSideEyes05.png" />
+    <Content Include="Resources\Images\Eyes\LookingToRightSideEyes\LookingToRightSideEyes06.png" />
+    <Content Include="Resources\Images\Eyes\LookingToRightSideEyes\LookingToRightSideEyes07.png" />
+    <Content Include="Resources\Images\Eyes\LookingToRightSideEyes\LookingToRightSideEyes08.png" />
+    <Content Include="Resources\Images\Eyes\LookingToRightSideEyes\LookingToRightSideEyes09.png" />
+    <Content Include="Resources\Images\Eyes\LookingToRightSideEyes\LookingToRightSideEyes10.png" />
+    <Content Include="Resources\Images\Eyes\LookingToRightSideEyes\LookingToRightSideEyes11.png" />
+    <Content Include="Resources\Images\Eyes\LookingToRightSideEyes\LookingToRightSideEyes12.png" />
+    <Content Include="Resources\Images\Face\Face.png" />
+    <Content Include="Resources\Images\Mouths\Mouth.png" />
+    <Content Include="Resources\Images\Mouths\TalkingMouths\Mouth01.png" />
+    <Content Include="Resources\Images\Mouths\TalkingMouths\Mouth02.png" />
+    <Content Include="Resources\Images\Mouths\TalkingMouths\Mouth03.png" />
+    <Content Include="Resources\Images\Mouths\TalkingMouths\Mouth04.png" />
+    <Content Include="Resources\Images\Mouths\TalkingMouths\Mouth05.png" />
+    <Content Include="Resources\Images\Mouths\TalkingMouths\Mouth06.png" />
+    <Content Include="Resources\Images\Mouths\TalkingMouths\Mouth07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NAudio">
+      <Version>1.10.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY "$(SolutionDir)AnimatedAvatar\Resources\" "$(TargetDir)Resources" /I /S /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>
