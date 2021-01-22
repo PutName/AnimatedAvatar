@@ -18,30 +18,30 @@ namespace AnimatedAvatar
             _avatarAnimator.FrameWasChanged += AnimationFrameWasChanged;
         }
 
-        private void AnimationFrameWasChanged(object _sender, EventArgs _e)
+        private void AnimationFrameWasChanged(object sender, EventArgs e)
         {
             AnimationPictureBox.Invalidate();
         }
 
-        private void AnimationPictureBox_Paint(object _sender, PaintEventArgs _e)
+        private void AnimationPictureBox_Paint(object sender, PaintEventArgs e)
         {
             if (_avatarAnimator.CurrentFrame != null)
             {
-                _e.Graphics.Clear(InitialData.BackgroundColor);
-                _e.Graphics.DrawImage(_avatarAnimator.CurrentFrame, 0, 0, _avatarAnimator.CurrentFrame.Width, _avatarAnimator.CurrentFrame.Height);
+                e.Graphics.Clear(InitialData.BackgroundColor);
+                e.Graphics.DrawImage(_avatarAnimator.CurrentFrame, 0, 0, _avatarAnimator.CurrentFrame.Width, _avatarAnimator.CurrentFrame.Height);
                 GC.Collect();
             }
         }
 
-        private void AnimationPictureBox_MouseDown(object _sender, MouseEventArgs _e)
+        private void AnimationPictureBox_MouseDown(object sender, MouseEventArgs e)
         {
-            if (_e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
                 _previousPosition = MousePosition;
         }
 
-        private void AnimationPictureBox_MouseMove(object _sender, MouseEventArgs _e)
+        private void AnimationPictureBox_MouseMove(object sender, MouseEventArgs e)
         {
-            if (_e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
             {
                 Point currentPosition = MousePosition;
                 Location = new Point(Location.X + (currentPosition.X - _previousPosition.X), Location.Y + (currentPosition.Y - _previousPosition.Y));
